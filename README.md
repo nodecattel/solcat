@@ -1,5 +1,3 @@
-Here's a comprehensive `README.md` for your Solcat project:
-
 ```markdown
 # Solcat
 
@@ -35,7 +33,7 @@ cd solcat
 
 2. Install dependencies
 ```bash
-yarn install
+yarn install && yarn build
 ```
 
 3. Copy the example environment file and update it with your settings
@@ -72,22 +70,10 @@ D64YBJ4FeR8czFX4hahX5N8AT9Wr5gDnp7dkqxQFReE,Wallet2
 
 ## Usage
 
-### Development Mode
+### Start Node
 ```bash
-yarn dev
+yarn start
 ```
-
-### Production Mode
-```bash
-yarn build
-yarn start:prod
-```
-
-### Build Only
-```bash
-yarn build
-```
-
 ### Clean Build
 ```bash
 yarn rebuild

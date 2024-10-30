@@ -1,29 +1,26 @@
 solcat/
-│
-├── .env
-├── .env.example
-├── .gitignore         
-├── package.json
-├── README.md
-├── yarn.lock
-├── export
-├── nano
-├── node_modules/
-│
+├── .env                  # Environment variables
+├── .env.example         # Example environment variables template
+├── .gitignore           # Git ignore configuration
+├── package.json         # Project dependencies and scripts
+├── tsconfig.json        # TypeScript configuration
+├── wallets.csv          # CSV file containing wallet addresses to track
 └── src/
-    ├── handlers/
-    │   └── webhookHandler.js
-    │
-    ├── import/
-    │
-    ├── utils/
-    │   └── logger.js
-    │
-    ├── services/
-    │   ├── createWebhookService.js
-    │   ├── dataService.js
-    │   ├── transactionService.js
-    │   └── webhookService.js
-    │
-    ├── monitor.js
-    └── server.js
+    ├── config/          # Configuration management
+    │   └── index.ts     # Main configuration setup
+    ├── handlers/        # Transaction handlers
+    │   ├── payloadHandler.ts        # Main transaction processing logic
+    │   ├── transactionProcessors.ts # Specific transaction type processors
+    │   └── webhookHandler.ts        # Webhook endpoint handler
+    ├── services/        # Business logic services
+    │   ├── tokenService.ts  # Token information service
+    │   └── walletService.ts # Wallet management service
+    ├── types/           # TypeScript type definitions
+    │   ├── enums.ts         # Enum definitions
+    │   ├── environment.ts   # Environment config types
+    │   ├── HeliusPayload.ts # Helius webhook payload types
+    │   └── index.ts         # Main types exports
+    ├── utils/           # Utility functions
+    │   ├── baseLogger.ts    # Basic logging utility
+    │   └── logger.ts        # Enhanced logging utility
+    └── server.ts        # Main application entry point

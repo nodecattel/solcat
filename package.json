@@ -2,23 +2,39 @@
   "name": "solcat",
   "version": "1.0.0",
   "description": "Solana tx tracker with Helius SDK",
-  "main": "src/server.js",
+  "main": "dist/server.js",
   "type": "module",
   "scripts": {
-    "start": "node src/server.js",
-    "build": "tsc"
+    "start": "NODE_ENV=development node dist/server.js",
+    "start:prod": "NODE_ENV=production node dist/server.js",
+    "dev": "NODE_ENV=development tsx watch src/server.ts",
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "rebuild": "yarn clean && yarn build"
   },
   "dependencies": {
     "arweave": "^1.15.5",
+    "csv-parse": "^5.5.6",
+    "csv-parser": "^3.0.0",
     "dotenv": "^16.4.5",
-    "express": "^4.18.2",
+    "express": "^4.21.1",
     "fastestsmallesttextencoderdecoder": "^1.0.22",
     "helius-sdk": "^1.4.0",
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.0",
     "@types/node-fetch": "^2.6.11",
-    "typescript": "^5.6.3"
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "license": "MIT",
   "author": "NodeCattel",

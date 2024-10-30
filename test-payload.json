@@ -1,0 +1,16 @@
+[{
+    "type": "SWAP",
+    "signature": "test-signature-123",
+    "feePayer": "D64YBJ4FeR8czFX4hahX5N8AT9Wr5gDnp7dkqxQFReE",
+    "source": "Jupiter",
+    "inputToken": {
+        "mint": "So11111111111111111111111111111111111111112",
+        "symbol": "SOL",
+        "amount": 1.5
+    },
+    "outputToken": {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "symbol": "USDC",
+        "amount": 100
+    }
+}]
